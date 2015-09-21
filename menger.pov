@@ -27,7 +27,6 @@ fog {
   turbulence 0.8
 }      
 
-
 #macro voidCubes(dim) 
    
     #declare y1 = (1/3)/(pow(3,dim));
@@ -43,7 +42,11 @@ fog {
             #while (y1<=1)
                     box { <prod1,y1,z1> <prod2,y1+psize,z1+psize> pigment { color rgb <1,0.2,0> } } 
                     box { <y1,z1,prod1> <y1+psize,z1+psize,prod2> pigment { color rgb <1,0.2,0> } } 
-                    box { <y1,prod1,z1> <y1+psize,prod2,z1+psize> pigment { color rgb <1,0.2,0> } }                                                
+                    box { <y1,prod1,z1> <y1+psize,prod2,z1+psize> pigment { color rgb <1,0.2,0> } }  
+                    
+                    #if (dim < 2 )
+                    light_source { <(prod1+prod2)/2,y1,z1> color rgb <1,1,1> }                
+                    #end                                               
                                              
                     #declare y1=y1+pow((1/3),dim);
             #end
