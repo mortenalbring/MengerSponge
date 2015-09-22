@@ -1,7 +1,9 @@
 camera {
-        location  <150, 255, -600>         
-        look_at   <150, 150, 200>
-}
+        location  <2*cos(pi*clock), 1, (-2*sin(pi*clock))-1>         
+        look_at   <0.66, 0.33, 0.66>        
+        
+}      
+/*
 
 plane { y, 0
 		pigment { checker rgb <0.1, 0.1, 0.1> rgb <1.0, 1.0, 1.0> scale 15 }
@@ -26,7 +28,8 @@ fog {
   fog_alt    0.2
   turbulence 0.8
 }      
-
+  
+ */
 #macro voidCubes(dim) 
    
     #declare y1 = (1/3)/(pow(3,dim));
@@ -60,10 +63,11 @@ fog {
             box {  <0, 0, 0>    <1,1,1>  }
             voidCubes(0)
             voidCubes(1)
-            voidCubes(2)               
+            
+            
 }
 
-object { menger scale 300 
+object { menger scale 1 
           
  pigment { color rgb <1,0.2,0>  }
      finish {
@@ -75,5 +79,6 @@ object { menger scale 300
           .75
           metallic
         }
-     }
+     }   
+        
 }
