@@ -2,7 +2,11 @@ camera {
         location  <2*cos(pi*clock), 1, (-2*sin(pi*clock))-1>         
         look_at   <0.66, 0.33, 0.66>        
         
-}      
+}   
+#include "colors.inc"
+#include "metals.inc"
+
+
 /*
 
 plane { y, 0
@@ -63,6 +67,8 @@ fog {
             box {  <0, 0, 0>    <1,1,1>  }
             voidCubes(0)
             voidCubes(1)
+            voidCubes(2)
+            
             
             
 }
