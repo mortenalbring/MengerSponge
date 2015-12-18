@@ -10,5 +10,5 @@ Menger thought about geometry in its most fundamental sense and devised a comple
 
 This sponge has the property that every concievable curve can be embedded within it. 
 
-![alt tag](http://www.mortenalbring.com/Content/images/menger/menger-level-3.png)
+![alt tag](http://www.mortenalbring.com/Content/images/menger/menger-level-5.png)
 
